@@ -109,35 +109,35 @@ public class PickUpObject : MonoBehaviour
 
         //if (fpsPlayer.GetComponent<PickupClockScr>().hasClock)
         //if (objectCheck.GetComponent<PlayerClockCheck>().hasClock)
-        if (GameObject.Find("ClockCheckObject").GetComponent<PlayerClockCheck>().hasClock) // || GameObject.Find("ClockCheckObjectTemp").GetComponent<PlayerClockCheck>().hasClock)
-        {
-            if (pullClockOut)
-            {
-                var step = speed * Time.deltaTime; // calculate distance to move
-                clockHand.transform.position = Vector3.MoveTowards(clockHand.transform.position, handTarget.position, step);
+        // if (GameObject.Find("ClockCheckObject").GetComponent<PlayerClockCheck>().hasClock) // || GameObject.Find("ClockCheckObjectTemp").GetComponent<PlayerClockCheck>().hasClock)
+        // {
+        //     if (pullClockOut)
+        //     {
+        //         var step = speed * Time.deltaTime; // calculate distance to move
+        //         clockHand.transform.position = Vector3.MoveTowards(clockHand.transform.position, handTarget.position, step);
 
-                // Check if the position of the cube and sphere are approximately equal.
-                if (Vector3.Distance(clockHand.transform.position, handTarget.position) < 0.0001f)//< 0.001f)
-                {
-                    // Swap the position of the cylinder.
-                    pullClockOut = false;
-                }
-            }
+        //         // Check if the position of the cube and sphere are approximately equal.
+        //         if (Vector3.Distance(clockHand.transform.position, handTarget.position) < 0.0001f)//< 0.001f)
+        //         {
+        //             // Swap the position of the cylinder.
+        //             pullClockOut = false;
+        //         }
+        //     }
 
-            if (putClockAway)
-            {
-                var step = speed * Time.deltaTime; // calculate distance to move
-                clockHand.transform.position = Vector3.MoveTowards(clockHand.transform.position, pocketTarget.position, step);
+        //     if (putClockAway)
+        //     {
+        //         var step = speed * Time.deltaTime; // calculate distance to move
+        //         clockHand.transform.position = Vector3.MoveTowards(clockHand.transform.position, pocketTarget.position, step);
 
-                // Check if the position of the cube and sphere are approximately equal.
-                if (Vector3.Distance(clockHand.transform.position, pocketTarget.position) < 0.0001f)//< 0.001f)
-                {
-                    // Swap the position of the cylinder.
-                    putClockAway = false;
-                    clockHand.SetActive(false);
-                }
-            }
-        }
+        //         // Check if the position of the cube and sphere are approximately equal.
+        //         if (Vector3.Distance(clockHand.transform.position, pocketTarget.position) < 0.0001f)//< 0.001f)
+        //         {
+        //             // Swap the position of the cylinder.
+        //             putClockAway = false;
+        //             clockHand.SetActive(false);
+        //         }
+        //     }
+        // }
 
         // if (pullClockOut)
         // {
